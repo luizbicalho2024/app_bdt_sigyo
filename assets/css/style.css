@@ -1,0 +1,200 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F4F6F9; /* Fundo cinza claro da imagem */
+    color: #444;
+    font-size: 14px;
+}
+
+/* --- HEADER PRINCIPAL (TOPO ESCURO) --- */
+.main-header {
+    background-color: #1A1C23; /* Tom escuro quase preto */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.logo-area {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.logo-area span { color: #fff; }
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #555;
+    display: inline-block;
+}
+
+/* --- MENU DE NAVEGAÇÃO (BARRA BRANCA) --- */
+.nav-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Responsivo se tela for pequena */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #6c757d;
+    padding: 14px 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    color: #333;
+}
+
+/* Item ativo (Laranja conforme imagem) */
+.nav-item.active {
+    color: #FF9F43; 
+    border-bottom-color: #FF9F43;
+    font-weight: 600;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    color: #888;
+}
+
+.breadcrumb span { color: #FF9F43; }
+
+/* --- CARTÕES E TABELAS (ESTILO CARD) --- */
+.card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Tabela estilo Sigyo */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+table thead th {
+    text-align: left;
+    padding: 12px 15px;
+    color: #2ECC71; /* Verde cabeçalho conforme algumas telas Sigyo ou cinza padrão */
+    color: #6c757d; /* Ajuste para cinza padrão da imagem enviada */
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Status Dots */
+.status-dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.status-green { background-color: #2ECC71; }
+.status-red { background-color: #E74C3C; }
+.status-orange { background-color: #FF9F43; }
+
+/* Botões */
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #4834D4; /* Azul/Roxo do botão Token API */
+    color: #fff;
+}
+
+.btn-primary:hover { background-color: #3c2bb3; }
+
+/* --- VERSÃO MOBILE (RESPONSIVIDADE SIMPLIFICADA) --- */
+@media (max-width: 768px) {
+    .nav-bar { display: none; /* Esconde menu complexo no mobile */ }
+    
+    .mobile-header {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        background: #1A1C23;
+        color: #fff;
+    }
+    
+    .mobile-card {
+        padding: 20px;
+        background: #fff;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .btn-block {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
